@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>温泉 - 石井花壇｜温海温泉旅館【公式サイト】</title>
+  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至福のひとときをお過ごしください。">
+  <meta name="robots" content="noindex">
+
+  <!-- reset.css -->
+  <link rel="stylesheet" href="./css/reset.css">
+  
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+
+  <!-- jQuery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+  
+  <!-- aos.js -->
+  <link rel="stylesheet" href="./css/aos.css">
+  <script src="./js/aos.js"></script>
+
+  <!-- flatpickr -->
+  <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+  <script src="https://unpkg.com/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+  <!-- original -->
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js"></script>
+
+  <!-- パンくず構造化 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": ""
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "お部屋",
+        "item": ""
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "お料理",
+        "item": ""
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "温泉",
+        "item": ""
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body>
+  <header class="header" data-aos="fade" data-aos-duration="2500">
+    <div class="header-content">
+      <a class="header-logo" href="index.html">
+        <img src="./img/sub-header-logo.png" alt="">
+      </a>
+      <div class="is-pc">
+        <ul class="header-nav">
+          <li class="header-nav-item"><a href="room.html">お部屋</a></li>
+          <li class="header-nav-item"><a href="food.html">お料理</a></li>
+          <li class="header-nav-item"><a href="spa.html">温泉</a></li>
+        </ul>
+      </div>
+      <div class="top-header-btn js-modal-open is-pc">宿泊予約</div>
+      <figure class="hamburger js-drawer-open">
+        <img src="./img/hamburger.png" alt="">
+      </figure>
+    </div><!-- /.header-content -->
+  </header><!-- /.header -->
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer js-drawer">
+    <div class="drawer-bg js-drawer-close"></div>
+    <div class="drawer-content">
+      <figure class="modal-close js-drawer-close">
+        <img src="./img/close.png" alt="">
+      </figure>
+      <ul class="drawer-nav">
+        <li class="drawer-nav-item"><a href="room.html">お部屋</a></li>
+        <li class="drawer-nav-item"><a href="food.html">お料理</a></li>
+        <li class="drawer-nav-item"><a href="spa.html">温泉</a></li>
+        <li class="drawer-nav-item top-header-btn js-modal-open"><span>宿泊予約</span></li>
+      </ul>
+    </div>
+  </div><!-- /.drawer -->
+
+
+  <!-- モーダル -->
+  <div class="modal js-modal">
+    <div class="modal-bg js-modal-close"></div>
+    <div class="modal-content">
+      <p class="modal-content-txt">宿泊予約</p>
+      <figure class="modal-close js-modal-close">
+        <img src="./img/close.png" alt="">
+      </figure>
+      <form action="" method="POST">
+        <div class="modal-name">
+          <label for="name">お名前</label>
+          <input type="text" id="name" placeholder="例：石井正悟" required>
+        </div>
+        <div class="modal-email">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" placeholder="例：Example@example.com" required>
+        </div>
+        <div class="modal-plan">
+          <label for="select">ご希望プラン<span>（空いているプランのみ表示されます）</span></label>
+          <select id="select" class="select" required>
+            <option value="" selected>プランを選択してください</option>
+            <option value="【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+            <option value="平日に優雅に楽しむ、特別宿泊プラン">平日に優雅に楽しむ、特別宿泊プラン</option>
+            <option value="絶景貸切露天と個室会席を満喫できるファミリープラン">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+          </select>
+        </div>
+        <div class="modal-date">
+          <p><label for="date">日時選択</label></p>
+          <input type="text" id="date" class="flatpickr" placeholder="日時を選択してください" required>
+        </div>
+        <button type="submit" class="modal-submit" disabled>送信する</button>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+
+  <div class="mv mv-spa" data-aos="fade" data-aos-duration="2500">
+    <p class="mv-txt">温泉</p>
+  </div><!-- /.mv -->
+
+  <main>
+
+    <div class="inner">
+      <div class="breadcrumb" data-aos="fade" data-aos-duration="2500">
+        <a href="index.html">トップ</a> <span>></span> <a href="spa.html">温泉</a>
+      </div><!-- /.breadcrumb -->
+      
+      <section class="detail" data-aos="fade" data-aos-duration="2500">
+        <p class="detail-txt">心も身体も癒やす汐の温泉。<br class="is-tab">湯あたりしにくく、赤ちゃんから年配の方までどなたでもゆっくりと安心して入っていただけます。<br class="is-tab">柔らかく優しい湯にじっくりと漬かれば、心身共にリラックスできます。</p>
+        <div class="detail-item" data-aos="fade" data-aos-duration="2500">
+          <div class="detail-item-content">
+            <p class="detail-item-content-ttl">貸し切り露天風呂「雲居の湯」</p>
+            <p class="detail-item-content-txt">弱酸性の湯質が優しく肌を包み込むような心地よさ<br class="is-tab">最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を<br class="is-tab">熱海の町並みを遠方に望みながら・・・</p>
+          </div><!-- /.detail-item-content -->
+          <figure class="detail-item-img">
+            <img src="./img/onsen01.jpg" alt="">
+          </figure>
+        </div><!-- /.detail-item -->
+        <div class="detail-item" data-aos="fade" data-aos-duration="2500">
+          <div class="detail-item-content">
+            <p class="detail-item-content-ttl">美肌を促す乳白色の硫黄泉を</p>
+            <p class="detail-item-content-txt">まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩泉を、<br class="is-tab">たっぷりと掛け流しています。<br class="is-tab">四季の移り変わりを、天然温泉の湯に浸りながら味わってください。</p>
+          </div><!-- /.detail-item-content -->
+          <figure class="detail-item-img">
+            <img src="./img/onsen02.jpg" alt="">
+          </figure>
+        </div><!-- /.detail-item -->
+      </section><!-- /.detail -->
+
+      <section class="effect" data-aos="fade" data-aos-duration="2500">
+        <h2 class="effect-ttl">温泉の効能</h2>
+        <div class="effect-content">
+          <div class="effect-item">
+            <p class="effect-item-ttl">効能</p>
+            <p class="effect-item-txt">神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど</p>
+          </div><!-- /.effect-item -->
+          <div class="effect-item">
+            <p class="effect-item-ttl">泉質</p>
+            <p class="effect-item-txt">ナトリウム・カルシウム-塩化物泉</p>
+          </div><!-- /.effect-item -->
+          <div class="effect-item">
+            <p class="effect-item-ttl">飲用効果</p>
+            <p class="effect-item-txt">弱塩化物泉は肌にやわらかなため、高齢者や病後の回復期によく、飲用すれば慢性便秘や慢性消化<br class="is-tab">器病に効果があります。</p>
+          </div><!-- /.effect-item -->
+        </div><!-- /.effect-content -->
+      </section><!-- /.effect -->
+
+    </div><!-- /.inner -->
+
+  </main>
+
+  <footer class="footer" data-aos="fade" data-aos-duration="2500">
+    <div class="footer-content">
+      <ul class="footer-menu">
+        <li class="footer-menu-item"><a href="room.html">お 部 屋</a></li>
+        <li class="footer-menu-item"><a href="food.html">お 料 理</a></li>
+        <li class="footer-menu-item"><a href="spa.html">温 泉</a></li>
+      </ul>
+      <figure class="footer-logo">
+        <img src="./img/footer-logo.png" alt="温泉ロゴ">
+      </figure>
+      <div class="footer-address">
+        <p class="footer-address-post">〒000-0000</p>
+        <p class="footer-address-place">山形県鶴岡市xxxxxxxxxxx</p>
+      </div>
+      <div class="footer-tell">
+        <div class="footer-tell-number">TEL.000-0000-0000</div>
+        <div class="footer-tell-fax">FAX.00-0000-0000</div>
+      </div>
+    </div><!-- /.footer-content -->
+    <p class="copyright"><small>Copyright &copy; 石井花壇 All Rights Reserved.</small></p>
+  </footer>
+
+</body>
+</html>
